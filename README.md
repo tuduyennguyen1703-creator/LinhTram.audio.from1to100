@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Flashcard Luyện Nghe (1-50)</title>
+    <title>Flashcard Luyện Nghe (1-100)</title>
     <style>
         :root {
             --primary: #4f46e5;
@@ -362,14 +362,14 @@
 
     <!-- Start Overlay for Audio Permissions -->
     <div class="start-overlay" id="start-screen">
-        <h1 style="margin-bottom: 30px; text-align: center;">Flashcard Luyện Nghe<br>(1 - 50)</h1>
+        <h1 style="margin-bottom: 30px; text-align: center;">Flashcard Luyện Nghe<br>(1 - 100)</h1>
         <button class="start-btn" onclick="startApp()">Bắt đầu học ▶</button>
         <p style="margin-top: 20px; color: #666;">(Nhấn để bật âm thanh)</p>
     </div>
 
     <header>
         <div class="header-content">
-            <h1>Từ Vựng 1-50</h1>
+            <h1>Từ Vựng 1-100</h1>
             <div style="display: flex; align-items: center; gap: 10px;">
                 <div style="font-size: 0.9rem; font-weight: bold; color: var(--primary);">
                     <span id="queue-count">0</span> cần học
@@ -469,7 +469,7 @@
     </div>
 
     <script>
-        // Data Source 1-50
+        // Data Source 1-100
         const rawData = [
             { id: 1, word: "Safe", type: "(adj)", ipa: "/seɪf/", meaning: "An toàn" },
             { id: 2, word: "View", type: "(v)", ipa: "/vjuː/", meaning: "nhìn, xem" },
@@ -520,7 +520,57 @@
             { id: 47, word: "Drop", type: "(v)", ipa: "/drɒp/", meaning: "Làm rơi, vứt" },
             { id: 48, word: "Farm", type: "(n)", ipa: "/fɑːm/", meaning: "Nông trại" },
             { id: 49, word: "Shape", type: "(n)", ipa: "/ʃeɪp/", meaning: "hình dạng" },
-            { id: 50, word: "Secret", type: "(n)", ipa: "/ˈsiːkrət/", meaning: "bí mật" }
+            { id: 50, word: "Secret", type: "(n)", ipa: "/ˈsiːkrət/", meaning: "bí mật" },
+            { id: 51, word: "Quickly", type: "(adv)", ipa: "/ˈkwɪkli/", meaning: "Một cách nhanh chóng" },
+            { id: 52, word: "On", type: "(prep)", ipa: "/ɒn/", meaning: "Ở trên" },
+            { id: 53, word: "Calm", type: "(adj)", ipa: "/kɑːm/", meaning: "bình tĩnh" },
+            { id: 54, word: "During", type: "(prep)", ipa: "/ˈdjʊərɪŋ/", meaning: "trong suốt (thời gian)" },
+            { id: 55, word: "Smoke", type: "(n)", ipa: "/sməʊk/", meaning: "Khói" },
+            { id: 56, word: "Carefully", type: "(adv)", ipa: "/ˈkeəfəli/", meaning: "Một cách cẩn thận" },
+            { id: 57, word: "Loud", type: "(adj)", ipa: "/laʊd/", meaning: "to, ồn ào" },
+            { id: 58, word: "Reusable", type: "(adj)", ipa: "/ˌriːˈjuːzəbl/", meaning: "Có thể tái sử dụng" },
+            { id: 59, word: "Create", type: "(v)", ipa: "/kriˈeɪt/", meaning: "tạo ra" },
+            { id: 60, word: "Litter", type: "(n)", ipa: "/ˈlɪtə(r)/", meaning: "Rác vụn (vứt bừa bãi)" },
+            { id: 61, word: "Appropriate", type: "(adj)", ipa: "/əˈprəʊpriət/", meaning: "thích hợp, phù hợp" },
+            { id: 62, word: "Never", type: "(adv)", ipa: "/ˈnevə(r)/", meaning: "Không bao giờ" },
+            { id: 63, word: "Noise", type: "(n)", ipa: "/nɔɪz/", meaning: "Tiếng ồn" },
+            { id: 64, word: "Dirty", type: "(adj)", ipa: "/ˈdɜːti/", meaning: "Bẩn, dơ" },
+            { id: 65, word: "Local", type: "(adj)", ipa: "/ˈləʊkl/", meaning: "Địa phương" },
+            { id: 66, word: "Agree", type: "(v)", ipa: "/əˈɡriː/", meaning: "đồng ý" },
+            { id: 67, word: "Reuse", type: "(v)", ipa: "/ˌriːˈjuːz/", meaning: "Tái sử dụng" },
+            { id: 68, word: "Solar", type: "(adj)", ipa: "/ˈsəʊlə(r)/", meaning: "(Thuộc) mặt trời" },
+            { id: 69, word: "Adult", type: "(n)", ipa: "/ˈædʌlt/", meaning: "người lớn, người trưởng thành" },
+            { id: 70, word: "Bag", type: "(n)", ipa: "/bæɡ/", meaning: "Cái túi" },
+            { id: 71, word: "Laugh", type: "(n)", ipa: "/lɑːf/", meaning: "tiếng cười" },
+            { id: 72, word: "Concern", type: "(n)", ipa: "/kənˈsɜːn/", meaning: "mối quan tâm, sự lo lắng" },
+            { id: 73, word: "Nervous", type: "(adj)", ipa: "/ˈnɜːvəs/", meaning: "lo lắng" },
+            { id: 74, word: "Approach", type: "(v)", ipa: "/əˈprəʊtʃ/", meaning: "tiếp cận" },
+            { id: 75, word: "Danger", type: "(n)", ipa: "/ˈdeɪndʒə(r)/", meaning: "Mối nguy hiểm" },
+            { id: 76, word: "Typical", type: "(adj)", ipa: "/ˈtɪpɪkl/", meaning: "điển hình, tiêu biểu" },
+            { id: 77, word: "Travel", type: "(v)", ipa: "/ˈtrævl/", meaning: "du lịch" },
+            { id: 78, word: "Alcohol", type: "(n)", ipa: "/ˈælkəhɒl/", meaning: "cồn, rượu" },
+            { id: 79, word: "Choose", type: "(v)", ipa: "/tʃuːz/", meaning: "lựa chọn" },
+            { id: 80, word: "Paper", type: "(n)", ipa: "/ˈpeɪpə(r)/", meaning: "Giấy" },
+            { id: 81, word: "River", type: "(n)", ipa: "/ˈrɪvə(r)/", meaning: "Con sông" },
+            { id: 82, word: "Rubbish", type: "(n)", ipa: "/ˈrʌbɪʃ/", meaning: "Rác (tương tự trash)" },
+            { id: 83, word: "Walk", type: "(v)", ipa: "/wɔːk/", meaning: "Đi bộ" },
+            { id: 84, word: "Weather", type: "(n)", ipa: "/ˈweðə(r)/", meaning: "Thời tiết" },
+            { id: 85, word: "Important", type: "(adj)", ipa: "/ɪmˈpɔːtnt/", meaning: "Quan trọng" },
+            { id: 86, word: "Boat", type: "(n)", ipa: "/bəʊt/", meaning: "thuyền" },
+            { id: 87, word: "Visit", type: "(v)", ipa: "/ˈvɪzɪt/", meaning: "thăm" },
+            { id: 88, word: "Cycle", type: "(v)", ipa: "/ˈsaɪkl/", meaning: "Đạp xe" },
+            { id: 89, word: "Among", type: "(prep)", ipa: "/əˈmʌŋ/", meaning: "ở giữa" },
+            { id: 90, word: "Breakfast", type: "(n)", ipa: "/ˈbrekfəst/", meaning: "bữa sáng" },
+            { id: 91, word: "Damage", type: "(n)", ipa: "/ˈdæmɪdʒ/", meaning: "Sự thiệt hại" },
+            { id: 92, word: "Water", type: "(n)", ipa: "/ˈwɔːtə(r)/", meaning: "Nước" },
+            { id: 93, word: "Duck", type: "(n)", ipa: "/dʌk/", meaning: "con vịt" },
+            { id: 94, word: "Shower", type: "(v)", ipa: "/ˈʃaʊə(r)/", meaning: "Tắm (vòi sen)" },
+            { id: 95, word: "Always", type: "(adv)", ipa: "/ˈɔːlweɪz/", meaning: "Luôn luôn" },
+            { id: 96, word: "Beach", type: "(n)", ipa: "/biːtʃ/", meaning: "Bãi biển" },
+            { id: 97, word: "Worse", type: "(adj)", ipa: "/wɜːs/", meaning: "tệ hơn" },
+            { id: 98, word: "Grow", type: "(v)", ipa: "/ɡrəʊ/", meaning: "Trồng, phát triển" },
+            { id: 99, word: "Avoid", type: "(v)", ipa: "/əˈvɔɪd/", meaning: "tránh, né tránh" },
+            { id: 100, word: "Harm", type: "(v)", ipa: "/hɑːm/", meaning: "Gây hại" }
         ];
 
         // State variables
@@ -531,7 +581,7 @@
         let voicesList = [];
         let britishVoices = [];
         let selectedVoiceURI = ''; // Store user's choice
-        const STORAGE_KEY = 'vocab_app_listening_v4_1_50';
+        const STORAGE_KEY = 'vocab_app_listening_v6_1_100';
 
         // --- Initialization ---
         function init() {
